@@ -1,0 +1,19 @@
+{
+  "name": "typescript-react-webpack",
+  "scripts": {
+    "build": "node scripts/build"
+  },
+  "devDependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "ts-loader": "^2.3.2",
+    "typescript": "2.3.2",
+    "typings": "^2.1.1",
+    "webpack": "^3.4.1",
+    "shelljs": "^0.7.0"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
