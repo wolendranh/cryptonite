@@ -12,6 +12,15 @@
     "48": "img/icon-48.png",
     "128": "img/icon-128.png"
   },
-  "permissions": [ "contextMenus", "management", "tabs", "storage", "https://github.com/*" ],
-  "content_security_policy": "default-src 'self'; script-src 'self' http://localhost:3000 https://localhost:3000 'unsafe-eval'; connect-src http://localhost:3000 https://localhost:3000; style-src * 'unsafe-inline' 'self' blob:; img-src 'self' data:;"
+  "permissions": [
+    "contextMenus",
+    "management",
+    "tabs",
+    "storage",
+    "https://github.com/*",
+    "https://streamer.cryptocompare.com/*",
+    "ws://localhost:8000/*"
+
+  ],
+"content_security_policy": "default-src 'self'; script-src 'self' http://localhost:3000 https://localhost:3000 https://streamer.cryptocompare.com 'unsafe-eval'; connect-src ws://localhost:8000/socketcluster/ http://localhost:3000 https://localhost:3000 https://streamer.cryptocompare.com; style-src * 'unsafe-inline' 'self' blob:; img-src 'self' data:;"
 }
