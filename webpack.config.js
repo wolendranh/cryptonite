@@ -1,4 +1,5 @@
 var path = require("path");
+const webpack = require('webpack'); //to access built-in plugins
 
 var config = {
   /*
@@ -6,8 +7,8 @@ var config = {
    * recursively go through every "require" statement in app.ts and
    * efficiently build out the application's dependency tree.
    */
-  entry: ["./src/app.tsx"],
-
+  entry: ["./src/containers/App.tsx"],
+  devtool: 'cheap-module-eval-source-map',
   /*
    * The combination of path and filename tells Webpack what name to give to
    * the final bundled JavaScript file and where to store this file.
@@ -25,6 +26,12 @@ var config = {
   resolve: {
     extensions: [".ts", ".tsx", ".js"]
   },
+
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development')
+    })
+  ],
 
   module: {
     /*
